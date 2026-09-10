@@ -24,8 +24,8 @@ public class FirstController {
 
     @GetMapping("/")
     public String home() {
-    	logger.debug("Entering hello() method");
-    	logger.info("Home endpoint accessed - serving welcome page");
+    	LOGGER.debug("Entering hello() method");
+    	LOGGER.info("Home endpoint accessed - serving welcome page");
         return "<h1>Welcome from micro service A.</h1>";
     }
 
