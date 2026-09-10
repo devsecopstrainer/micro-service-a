@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestClient;
 
 @RestController
-@RequestMapping("/first")
+//@RequestMapping("/first")
 public class FirstController {
 
 	@Autowired
@@ -30,7 +30,7 @@ public class FirstController {
     }
 
 	
-	@GetMapping("/get-data")
+	//@GetMapping("/get-data")
 	public String getData() {
 		LOGGER.info("*----------- First micro service call starts here -----------*");
 		String uri = environment.getProperty("second.service.end-point", "");
