@@ -21,6 +21,14 @@ public class FirstController {
 	private Environment environment;
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(FirstController.class);
+
+    @GetMapping("/")
+    public String home() {
+    	logger.debug("Entering hello() method");
+    	logger.info("Home endpoint accessed - serving welcome page");
+        return "<h1>Welcome from micro service A.</h1>";
+    }
+
 	
 	@GetMapping("/get-data")
 	public String getData() {
